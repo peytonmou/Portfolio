@@ -43,6 +43,7 @@ html {
 
 .project-dual-col .project-category {
     margin-bottom: 1rem !important;
+    scroll-margin-top: 300px;
 }
 
 .project-card-text {
