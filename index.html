@@ -10,195 +10,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        /* Two-column layout for projects 5 & 6 */
-        .projects-dual-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            padding: 0 2rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .project-dual-col {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-dual-col .project-category {
-            margin-bottom: 1rem !important;
-            scroll-margin-top: 150px;
-        }
-
-        .project-card-text {
-            background: var(--card-bg, rgba(255, 255, 255, 0.04));
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            flex: 1;
-        }
-
-        .project-card-text h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text-color, #fff);
-            margin: 0;
-        }
-
-        .project-card-text p {
-            color: var(--text-secondary, rgba(255, 255, 255, 0.75));
-            line-height: 1.7;
-            margin: 0;
-            font-size: 0.95rem;
-        }
-
-        .project-card-text .tech-stack {
-            font-size: 0.88rem;
-            color: var(--text-secondary, rgba(255, 255, 255, 0.6));
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 1rem;
-            margin-top: auto;
-        }
-
-        /* ── Mute/Unmute toggle button ── */
-        .video-unmute-btn {
-            position: absolute;
-            bottom: 1.2rem;
-            right: 1.2rem;
-            background: rgba(0, 0, 0, 0.65);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            border-radius: 10px;
-            padding: 0.6rem 1.1rem;
-            font-size: 1rem;
-            cursor: pointer;
-            z-index: 10;
-            backdrop-filter: blur(6px);
-            transition: background 0.2s, transform 0.1s;
-            min-width: 160px;
-            text-align: center;
-            user-select: none;
-        }
-
-        .video-unmute-btn:hover {
-            background: rgba(0, 0, 0, 0.88);
-            transform: scale(1.04);
-        }
-
-        /* Lightbox navigation arrows */
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 50%;
-            width: 48px;
-            height: 48px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1001;
-            backdrop-filter: blur(4px);
-            transition: background 0.2s;
-        }
-
-        .lightbox-nav:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        .lightbox-nav.prev {
-            left: 1.5rem;
-        }
-
-        .lightbox-nav.next {
-            right: 1.5rem;
-        }
-
-        .lightbox-nav:disabled {
-            opacity: 0.25;
-            cursor: default;
-        }
-
-        /* Lightbox image counter */
-        .lightbox-counter {
-            position: absolute;
-            bottom: 1.2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.85rem;
-            background: rgba(0, 0, 0, 0.45);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            backdrop-filter: blur(4px);
-        }
-
-        /* ── Timeline logo ── */
-        .timeline-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .timeline-logo {
-            width: 36px;
-            height: 36px;
-            object-fit: contain;
-            border-radius: 6px;
-            background: rgba(255, 255, 255, 0.08);
-            padding: 3px;
-            flex-shrink: 0;
-        }
-
-        .timeline-header-text h4 {
-            margin: 0;
-        }
-
-        .timeline-header-text h5 {
-            margin: 0;
-        }
-
-        @media (max-width: 768px) {
-            .projects-dual-row {
-                grid-template-columns: 1fr;
-                padding: 0 1rem 1rem;
-            }
-
-            .lightbox-nav {
-                width: 38px;
-                height: 38px;
-                font-size: 1rem;
-            }
-
-            .lightbox-nav.prev {
-                left: 0.5rem;
-            }
-
-            .lightbox-nav.next {
-                right: 0.5rem;
-            }
-        }
-    </style>
 </head>
 
 <body>
     <nav id="navbar">
         <div class="nav-content">
-            <div class="logo">PM.</div>
+            <div class="logo">Data & AI</div>
             <div class="nav-links">
                 <div class="dropdown">
                     <a href="#projects" class="dropbtn">Projects</a>
                     <div class="dropdown-content">
-                        <a href="#project3">Data Science</a>
+                        <a href="#project3">Data Analytics</a>
                         <a href="#project1">Deep Learning</a>
                         <a href="#project4">Machine Learning</a>
                         <a href="#project5">Generative AI</a>
@@ -223,15 +45,27 @@
     <header id="about" class="hero">
         <div class="hero-content">
             <div class="hero-center-wrapper">
-                <div class="hero-video-container">
-                    <div class="hero-info-row">
-                        <div class="photo-container">
-                            <img src="photo.jpg" alt="Peyton Mou" class="profile-photo"
-                                onerror="this.style.display='none';">
-                            <div class="glow-effect"></div>
+                <div class="hero-info-row">
+                    <div class="photo-container">
+                        <img src="photo.jpg" alt="Peyton Mou" class="profile-photo"
+                            onerror="this.style.display='none';">
+                        <div class="glow-effect"></div>
+                    </div>
+                    <div class="hero-text-block">
+                        <h1><span class="highlight">Tong Mou (Peyton)</span></h1>
+                        <h2><span class="hero-tagline">Master of AI (Distinction), University of Otago</span></h2>
+                        <div class="hero-certified">
+                            <span class="hero-certified-label">Microsoft Certified</span>
+                            <div class="hero-badges">
+                                <img src="fabric-badge.jpg" class="badge-fabric"
+                                    alt="Microsoft Certified: Fabric Analytics Engineer Associate"
+                                    onerror="this.style.display='none';">
+                                <img src="powerbi-badge.png" class="badge-powerbi"
+                                    alt="Microsoft Certified: Power BI Data Analyst Associate"
+                                    onerror="this.style.display='none';">
+                            </div>
                         </div>
-                        <div class="hero-text-block">
-                            <h1><span class="highlight">Tong Mou (Peyton)</span></h1>
+                        <div class="hero-contact">
                             <p class="hero-email-line">peyton.mou2024@gmail.com</p>
                             <div class="hero-links">
                                 <a href="https://github.com/peytonmou" target="_blank" class="hero-btn">GitHub</a>
@@ -239,17 +73,6 @@
                                     class="hero-btn">LinkedIn</a>
                             </div>
                         </div>
-                    </div>
-                    <!-- Video: autoplay unmuted (falls back to muted), toggle button stays visible -->
-                    <div class="hero-video-frame">
-                        <video class="hero-video" id="heroVideo" autoplay playsinline>
-                            <source src="self-intro.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-glow"></div>
-                        <!-- Persistent mute/unmute toggle button -->
-                        <button class="video-unmute-btn" id="muteToggleBtn" aria-label="Toggle mute">
-                            🔇 Tap to Unmute
-                        </button>
                     </div>
                 </div>
             </div>
@@ -261,7 +84,7 @@
 
         <!-- Project 3 -->
         <div id="project3" class="project-category category-data" style="scroll-margin-top: 150px;">&#128202; Data
-            Science</div>
+            Analytics</div>
         <div class="project-card">
             <div class="project-info">
                 <h3>Enterprise Business Intelligence & Performance Dashboard</h3>
@@ -516,11 +339,10 @@
 
             <!-- Project 6 -->
             <div class="project-dual-col">
-                <!-- FIX: match same class pattern as other category labels so shadow/bg styling applies -->
                 <div id="project6" class="project-category category-genai" style="margin:0 0 0 0;">&#128269;
                     Information Retrieval
                 </div>
-                <div id="project6" class="project-card-text">
+                <div id="project6-card" class="project-card-text">
                     <h3>Web Search Engine <a href="https://github.com/peytonmou/search_engine" target="_blank"
                             style="color: var(--primary-color); text-decoration: none; font-size: 1rem; font-weight: 600; margin-left: 0.4rem;">[GitHub]</a>
                     </h3>
@@ -547,10 +369,14 @@
                     <li><strong>Deep Learning &amp; GenAI:</strong> PyTorch, TensorFlow, Transformers, CNNs, Latent
                         Diffusion, CVAE</li>
                     <li><strong>Computer Vision &amp; Graphics:</strong> OpenCV, OpenGL</li>
-                    <li><strong>Cloud &amp; Development tools:</strong> Microsoft Azure, Azure AI Foundry, Git/GitHub
+                    <li><strong>Cloud &amp; Development tools:</strong> Microsoft Azure, Fabric, Foundry, Git/GitHub
                     </li>
                     <li class="cert-item-compact">
                         <ul>
+                            <li><a href="https://learn.microsoft.com/en-us/users/tongmou-7742/credentials/1e510560a9df8451"
+                                    target="_blank">Microsoft Certified: Fabric Analytics Engineer Associate
+                                    (DP-600)</a>
+                                | Jul 2026</li>
                             <li><a href="https://learn.microsoft.com/en-us/users/tongmou-7742/credentials/2d01681a07846e01"
                                     target="_blank">Microsoft Certified: Power BI Data Analyst Associate (PL-300)</a> |
                                 Jun 2026</li>
@@ -627,53 +453,6 @@
 
     <script src="script.js"></script>
     <script>
-        // ── Video: try unmuted autoplay, fall back to muted; persistent toggle button ──
-        (function () {
-            const video = document.getElementById('heroVideo');
-            const toggleBtn = document.getElementById('muteToggleBtn');
-
-            function updateToggleLabel() {
-                if (!toggleBtn) return;
-                toggleBtn.textContent = video.muted ? '🔇 Tap to Unmute' : '🔊 Tap to Mute';
-            }
-
-            // Try unmuted first; fall back to muted
-            video.muted = false;
-            video.play().catch(() => {
-                video.muted = true;
-                video.play().catch(() => { });
-            });
-
-            // Keep label in sync whenever mute state changes
-            video.addEventListener('volumechange', updateToggleLabel);
-            video.addEventListener('play', updateToggleLabel);
-            updateToggleLabel();
-
-            // Toggle mute/unmute on button click
-            if (toggleBtn) {
-                toggleBtn.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    if (video.ended) {
-                        // If video ended, replay unmuted
-                        video.muted = false;
-                        video.currentTime = 0;
-                        video.play();
-                    } else {
-                        video.muted = !video.muted;
-                    }
-                    updateToggleLabel();
-                });
-            }
-
-            // When video ends, change toggle button label to Replay
-            video.addEventListener('ended', function () {
-                if (toggleBtn) {
-                    toggleBtn.textContent = '▶ Replay';
-                }
-            });
-
-        })();
-
         // ── Lightbox with slider navigation ──────────────────────────────────
         let _lbImages = [];
         let _lbCurrent = 0;

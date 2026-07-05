@@ -79,27 +79,6 @@ html {
     margin-top: auto;
 }
 
-/* Unmute button */
-.video-unmute-btn {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.85rem;
-    cursor: pointer;
-    z-index: 10;
-    backdrop-filter: blur(4px);
-    transition: background 0.2s;
-}
-
-.video-unmute-btn:hover {
-    background: rgba(0, 0, 0, 0.85);
-}
-
 /* Lightbox navigation arrows */
 .lightbox-nav {
     position: absolute;
@@ -215,11 +194,11 @@ nav {
 
 /* ── Hero ── */
 .hero {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6rem 2rem 2rem;
+    padding: 8rem 2rem 3rem;
     position: relative;
     overflow: hidden;
 }
@@ -246,39 +225,22 @@ nav {
     z-index: 1;
 }
 
-/* Center-column wrapper that sets the video width and aligns everything to it */
+/* Center wrapper: single centered column now that the video is gone */
 .hero-center-wrapper {
     display: flex;
+    align-items: center;
     justify-content: center;
     width: 100%;
 }
 
-/* Video container is now the single column: info row on top, video below */
-.hero-video-container {
-    position: relative;
-    width: 64%;
-    max-width: 860px;
-    border-radius: 16px;
-    overflow: visible;
-    /* allow info row to overflow above */
-}
-
-.hero-video-frame {
-    position: relative;
-    border-radius: 16px;
-    border: 2px solid transparent;
-    background: linear-gradient(var(--bg-color), var(--bg-color)) padding-box, var(--gradient) border-box;
-    overflow: hidden;
-}
-
-/* Info row: photo + text block, left-aligned to the video container edge */
+/* Info row: photo left, text block right, vertically centered together */
 .hero-info-row {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 1.8rem;
-    margin-bottom: 1.4rem;
-    /* sits above the video, flush with video left edge */
-    padding-left: 0;
+    text-align: left;
+    gap: 2.5rem;
+    margin-bottom: 0;
 }
 
 .photo-container {
@@ -287,8 +249,8 @@ nav {
 }
 
 .profile-photo {
-    width: 120px;
-    height: 120px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid transparent;
@@ -303,8 +265,8 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90px;
-    height: 90px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     background: var(--gradient);
     filter: blur(20px);
@@ -325,7 +287,7 @@ nav {
     }
 }
 
-/* Text block: name / email / buttons stacked left-aligned */
+/* Text block: name / email / buttons / tagline / certified badges, left-aligned */
 .hero-text-block {
     display: flex;
     flex-direction: column;
@@ -354,6 +316,7 @@ nav {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: flex-start;
     margin-top: 0.2rem;
 }
 
@@ -377,48 +340,54 @@ nav {
     transform: translateY(-2px);
 }
 
-/* Video itself fills the container width */
-.hero-video {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 14px;
-}
+/* Tagline under the buttons */
 
-.video-glow {
-    position: absolute;
-    inset: 0;
-    border-radius: 14px;
-    box-shadow: 0 0 40px rgba(0, 240, 255, 0.15) inset;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.video-replay-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(8px);
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.1rem;
+.hero-tagline {
+    font-size: 1.3rem;
     font-weight: 600;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    cursor: pointer;
-    z-index: 10;
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
+    color: #ffffff;
+    max-width: 480px;
+    margin-top: 0.6rem;
+    line-height: 1.5;
+    text-align: left;
 }
 
-.video-replay-btn:hover {
-    background: var(--primary-color);
-    color: #0a0a0f;
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
-    transform: translate(-50%, -50%) scale(1.05);
+/* "Microsoft Certified" label + badge images */
+.hero-certified {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.hero-certified-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.5px;
+    text-transform: none;
+}
+
+.hero-badges {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-badges img {
+    width: auto;
+    display: block;
+}
+
+.badge-fabric {
+    height: 100px;
+}
+
+.badge-powerbi {
+    height: 100px;
 }
 
 /* ── Lightbox ── */
@@ -486,8 +455,7 @@ nav {
 
 /* ── Projects ── */
 .projects-section {
-    padding: 6rem 2rem 2rem;
-    /* reduced bottom padding */
+    padding: 1.5rem 2rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -732,14 +700,12 @@ nav {
 /* ── Skills & Experience — reduced spacing ── */
 .skills-cert-section {
     padding: 3rem 2rem 2rem;
-    /* was 6rem top */
     max-width: 900px;
     margin: 0 auto;
 }
 
 .experience-section {
     padding: 2rem 2rem 6rem;
-    /* was 6rem top */
     max-width: 900px;
     margin: 0 auto;
 }
@@ -749,7 +715,6 @@ nav {
 .experience-vertical-container,
 .education-vertical-container {
     margin-bottom: 3rem;
-    /* was 5rem */
 }
 
 .skills-vertical-container h3,
@@ -801,6 +766,23 @@ nav {
     border-radius: 50%;
     background: var(--primary-color);
     border: 4px solid var(--bg-color);
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 3px;
+    flex-shrink: 0;
 }
 
 .timeline-item h4 {
@@ -926,13 +908,35 @@ footer {
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-    .hero-video-container {
-        width: 95%;
-    }
-
     .hero-info-row {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text-block {
+        align-items: center;
+    }
+
+    .hero-links,
+    .hero-certified,
+    .hero-badges {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-tagline {
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .glow-effect {
+        width: 135px;
+        height: 135px;
     }
 
     .hero-text-block h1 {
