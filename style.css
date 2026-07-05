@@ -237,11 +237,30 @@ nav {
 .hero-info-row {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     text-align: left;
     gap: 2.5rem;
     margin-bottom: 0;
 }
+
+.hero-left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -100px;
+    /* shift leftwards */
+}
+
+.hero-left-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .photo-container {
     position: relative;
@@ -292,7 +311,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 1.5rem;
+    margin-top: 30px;
 }
 
 .hero-text-block h1 {
@@ -304,6 +324,7 @@ nav {
     background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
 }
 
 .hero-email-line {
@@ -343,11 +364,11 @@ nav {
 /* Tagline under the buttons */
 
 .hero-tagline {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 600;
     color: #ffffff;
     max-width: 480px;
-    margin-top: 0.6rem;
+    margin-top: 2rem;
     line-height: 1.5;
     text-align: left;
 }
@@ -363,7 +384,7 @@ nav {
 }
 
 .hero-certified-label {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: white;
     letter-spacing: 0.5px;
@@ -458,6 +479,7 @@ nav {
     padding: 1.5rem 2rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 /* Project category badge — centered, larger */
@@ -466,7 +488,7 @@ nav {
     text-align: center;
     padding: 0.45rem 1.2rem;
     border-radius: 20px;
-    font-size: 1.05rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 1.2rem;
     letter-spacing: 0.5px;
