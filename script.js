@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = 0;
 
         const updateSlider = (index) => {
-            // Clamp index within bounds
+            // Clamp index within bounds 
             index = Math.max(0, Math.min(index, slides.length - 1));
             track.style.transform = `translateX(-${index * 100}%)`;
             dots.forEach(dot => dot.classList.remove('active'));
