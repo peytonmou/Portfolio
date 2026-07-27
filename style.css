@@ -975,3 +975,233 @@ footer {
         padding: 2rem 1.5rem;
     }
 }
+
+/* ── AI Agent Access Banner ── */
+.agent-access-container {
+    width: 100%;
+    margin-bottom: 3.5rem;
+}
+
+.agent-access-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 180px;
+    background: linear-gradient(135deg, rgba(245, 247, 255, 0.95), rgba(230, 235, 252, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 1.8rem 2.2rem;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.agent-access-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.agent-access-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 240, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 240, 255, 0.4);
+}
+
+.agent-access-card:hover::before {
+    transform: translateX(100%);
+}
+
+/* Header/Top Badges */
+.agent-card-top {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.agent-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: none;
+}
+
+.running-badge {
+    background: rgba(15, 23, 42, 0.08);
+    color: #1e293b;
+    border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.running-badge .badge-bold {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.type-badge {
+    background: rgba(15, 23, 42, 0.08);
+    color: #1e293b;
+    border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.badge-icon {
+    display: inline-block;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+
+/* Middle / Title & Subtitle & Action Link */
+.agent-card-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+}
+
+.agent-card-info {
+    flex: 1;
+}
+
+.agent-card-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.agent-card-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #475569;
+}
+
+.agent-card-action {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    white-space: nowrap;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.agent-access-card:hover .agent-card-action {
+    color: var(--primary-color);
+    transform: translateX(4px);
+}
+
+/* Bottom / Author */
+.agent-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    padding-top: 1rem;
+    margin-top: auto;
+}
+
+.agent-author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.avatar-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ff007f 0%, #7000ff 100%);
+    box-shadow: 0 0 6px rgba(112, 0, 255, 0.4);
+}
+
+.author-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .agent-access-container {
+        margin-bottom: 2.5rem;
+    }
+
+    .agent-access-card {
+        padding: 1.5rem 1.8rem;
+        min-height: auto;
+    }
+
+    .agent-card-middle {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .agent-card-action {
+        align-self: flex-start;
+    }
+
+    .agent-card-title {
+        font-size: 1.5rem;
+    }
+
+    .agent-card-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* ── Normal Project Card Badges ── */
+.project-card-top {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.project-card .agent-badge,
+.project-card-text .agent-badge {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-main, #ffffff);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ── Smart Section Title ── */
+.section-title-smart {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(135deg, #a2b4fd, var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .section-title-smart {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+}

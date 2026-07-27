@@ -15,21 +15,7 @@
 <body>
     <nav id="navbar">
         <div class="nav-content">
-            <div class="logo">Data & AI</div>
-            <div class="nav-links">
-                <div class="dropdown">
-                    <a href="#projects" class="dropbtn">Projects</a>
-                    <div class="dropdown-content">
-                        <a href="#project3">Data Analytics</a>
-                        <a href="#project1">Deep Learning</a>
-                        <a href="#project4">Machine Learning</a>
-                        <a href="#project5">Generative AI</a>
-                        <a href="#project6">Information Retrieval</a>
-                    </div>
-                </div>
-                <a href="#skills">Skills & Certifications</a>
-                <a href="#experience">Experience</a>
-            </div>
+            <div class="logo">AI & Data</div>
         </div>
     </nav>
 
@@ -83,13 +69,231 @@
 
 
     <section id="projects" class="projects-section">
+        <h2 class="section-title-smart">AI & Data Projects</h2>
 
-        <!-- Project 3 -->
-        <div id="project3" class="project-category category-data" style="scroll-margin-top: 150px;">&#128202; Data
-            Analytics</div>
+        <!-- AI Agent Access Banner -->
+        <div class="agent-access-container">
+            <a href="https://peytonmou-techsolve.hf.space" target="_blank" class="agent-access-card">
+                <div class="agent-card-top">
+                    <span class="agent-badge type-badge">
+                        Azure AI Foundry • gpt-5-mini • Hugging Face
+                    </span>
+                </div>
+
+                <div class="agent-card-middle">
+                    <div class="agent-card-info">
+                        <h3 class="agent-card-title">AI Agent: Techsolve Ticket Analytics <span class="emoji">🦀</span>
+                        </h3>
+                        <p class="agent-card-subtitle">A LLM-powered analytics assistant using gpt-5-mini and
+                            OpenAI Function Calling to answer natural language questions over structured IT support
+                            data. </p>
+                    </div>
+                    <div class="agent-card-action">
+                        Click to Use &rarr;
+                    </div>
+                </div>
+
+                <div class="agent-card-bottom">
+                    <div class="agent-author">
+                        <span class="avatar-dot"></span>
+                        <span class="author-name">Ask about ticket trends, SLA performance, team workload, and
+                            resolution times.</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="project-card reverse">
+            <div class="project-info">
+                <div class="project-card-top">
+                    <span class="agent-badge type-badge">
+                        Computer Vision • CNN • Diffusion
+                    </span>
+                </div>
+                <h3>Image Classifier &amp; Diffusion <a href="https://github.com/peytonmou/deep_learning"
+                        target="_blank"
+                        style="color: var(--primary-color); text-decoration: none; font-size: 1.1rem; font-weight: 600; margin-left: 0.5rem;">[GitHub]</a>
+                </h3>
+                <p>A PyTorch-based CNN trained on the Oxford Flower dataset. Increased accuracy from baseline 60% to
+                    <strong style="color: var(--primary-color);">85.13%</strong> on
+                    the 10-class dataset and <strong style="color: var(--primary-color);">83.63%</strong> on the
+                    102-class dataset.
+                    <br><br>A latent diffusion pipeline including a U-Net denoising model and a variational autoencoder
+                    to
+                    generate flower-like images from pure random noise over 10 iterative denoising steps.
+                </p>
+
+            </div>
+            <div class="project-visuals">
+                <div class="project-slider" id="project2-slider">
+                    <div class="slides-track-container">
+                        <div class="slides-track">
+                            <div class="slide">
+                                <img src="assets/image/unet.png" alt="U-Net Architecture"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/image/img_cnn.png" alt="CNN Classification Result"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/image/img_cnn2.png" alt="CNN Training Curves"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/image/vae.png" alt="VAE Latent Space Reconstruction"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-arrow prev-arrow" aria-label="Previous slide">&#10094;</button>
+                    <button class="slider-arrow next-arrow" aria-label="Next slide">&#10095;</button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="project-card">
             <div class="project-info">
-                <h3>Enterprise Business Intelligence & Performance Dashboard</h3>
+                <div class="project-card-top">
+                    <span class="agent-badge type-badge">
+                        Transformer • CNN • BCI
+                    </span>
+                </div>
+                <h3>EEG-to-Text <a href="https://github.com/peytonmou/Closed-Vocab-EEG-to-Text" target="_blank"
+                        style="color: var(--primary-color); text-decoration: none; font-size: 1.1rem; font-weight: 600; margin-left: 0.5rem;">[GitHub]</a>
+                </h3>
+                <p> OETD: A new EEG (brain signal) dataset with 9200 samples collected from 12 subjects. A comprehensive
+                    evaluation across CNN / Transformer / Contrastive Learning / LLM, achieving <strong
+                        style="color: var(--primary-color);">27.05%</strong> test accuracy on 10-class
+                    EEG-to-Text decoding task.
+                    <br><br>
+                    <u>Publication submited to IEEE ICDM 2026 and under review:</u> <br>
+                    <em>"OETD: Exposing Evaluation Pitfalls
+                        in EEG-to-Text Decoding with a
+                        Realistic Benchmark"</em>
+                </p>
+
+            </div>
+            <div class="project-visuals">
+                <div class="project-slider" id="project1-slider">
+                    <div class="slides-track-container">
+                        <div class="slides-track">
+                            <div class="slide">
+                                <img src="assets/eeg/eeg-is-classwise_audio.png" alt="EEG Classwise Audio"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/eeg/eeg-datasets.png" alt="EEG Datasets"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/eeg/eeg-results.png" alt="EEG Results"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/eeg/OETD-open-vocab-results.png" alt="OETD Open Vocab Results"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/eeg/other-datasets-results.png" alt="Other Datasets Results"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/eeg/eeg-NetTraST.png" alt="EEG NetTraST"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/eeg/eeg-topomap.png" alt="EEG Topomap"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/eeg/eeg-experiment.png" alt="EEG Experiment"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-arrow prev-arrow" aria-label="Previous slide">&#10094;</button>
+                    <button class="slider-arrow next-arrow" aria-label="Next slide">&#10095;</button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="project-card reverse">
+            <div class="project-info">
+                <div class="project-card-top">
+                    <span class="agent-badge type-badge">
+                        Machine Learning • Data Science
+                    </span>
+                </div>
+                <h3>Wine Traceability <a href="https://github.com/peytonmou/Wine" target="_blank"
+                        style="color: var(--primary-color); text-decoration: none; font-size: 1.1rem; font-weight: 600; margin-left: 0.5rem;">[GitHub]</a>
+                </h3>
+                <p>Predict wine location based on NIR (near-infrared) and hyperspectral data through the bottle. Machine
+                    learning models
+                    (Logistic Regression, KNN,SVM, Random Forest, XGBOOST)
+                    and CNNs to classify wine
+                    types/regions/producers,
+                    achieving f1-scores <strong style="color: var(--primary-color);">89.33%</strong> on 5-class region
+                    and <strong style="color: var(--primary-color);">100%</strong> on 3-class liquid type
+                    classification.</p>
+            </div>
+            <div class="project-visuals">
+                <div class="project-slider" id="project4-slider">
+                    <div class="slides-track-container">
+                        <div class="slides-track">
+                            <div class="slide">
+                                <img src="assets/wine/wine-region-pca.png" alt="Wine Region PCA"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/wine/wine-liquidtype-pca.png" alt="Wine Liquid Type PCA"
+                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/wine/sensor5-cls-results.png"
+                                    alt="Wine Sensor 5 Classification Results" class="visual-img lightbox-trigger"
+                                    onclick="openLightbox(this)">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-arrow prev-arrow" aria-label="Previous slide">&#10094;</button>
+                    <button class="slider-arrow next-arrow" aria-label="Next slide">&#10095;</button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="project-card">
+
+            <div class="project-info">
+                <div class="project-card-top">
+                    <span class="agent-badge type-badge">
+                        Data Analytics • Power BI • SQL
+                    </span>
+                </div>
+                <h3>Power BI Dashboard</h3>
                 <p>An interactive Power BI dashboard/report created on the Adventure Works sales data (FY2018–2022).
                     <br>
 
@@ -106,9 +310,7 @@
                     matrices, conditional formatting,
                     and bookmarks enhance the user interaction experience.
                 </p>
-                <div class="tech-stack">
-                    <strong>Tech Stack:</strong> Power BI · SQL · DAX · Power Query · Semantic Model
-                </div>
+
             </div>
             <div class="project-visuals">
                 <div class="project-slider" id="project3-slider">
@@ -156,183 +358,19 @@
             </div>
         </div>
 
-        <!-- Project 1 -->
-        <div id="project1" class="project-category category-dl" style="scroll-margin-top: 150px;">&#129504; Deep
-            Learning</div>
-        <div class="project-card">
-            <div class="project-info">
-                <h3>EEG-to-Text <a href="https://github.com/peytonmou/Closed-Vocab-EEG-to-Text" target="_blank"
-                        style="color: var(--primary-color); text-decoration: none; font-size: 1.1rem; font-weight: 600; margin-left: 0.5rem;">[GitHub]</a>
-                </h3>
-                <p> OETD: A new EEG (brain signal) dataset with 9200 samples collected from 12 subjects. A comprehensive
-                    evaluation across CNN / Transformer / Contrastive Learning / LLM, achieving <strong
-                        style="color: var(--primary-color);">27.05%</strong> test accuracy on 10-class
-                    EEG-to-Text decoding task.
-                    <br><br>
-                    <u>Publication submited to IEEE ICDM 2026 and under review:</u> <br>
-                    <em>"OETD: Exposing Evaluation Pitfalls
-                        in EEG-to-Text Decoding with a
-                        Realistic Benchmark"</em>
-                </p>
-                <div class="tech-stack">
-                    <strong>Tech Stack:</strong> Python · PyTorch · MNE · EEGNet(CNN) · NetTraST(Transformer) ·
-                    NiceEEG(Contrastive Learning) · T5Translator(LLM)
-                </div>
-            </div>
-            <div class="project-visuals">
-                <div class="project-slider" id="project1-slider">
-                    <div class="slides-track-container">
-                        <div class="slides-track">
-                            <div class="slide">
-                                <img src="assets/eeg/eeg-is-classwise_audio.png" alt="EEG Classwise Audio"
-                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/eeg/eeg-datasets.png" alt="EEG Datasets"
-                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/eeg/eeg-results.png" alt="EEG Results"
-                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/eeg/eeg-NetTraST.png" alt="EEG NetTraST"
-                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/eeg/eeg-topomap.png" alt="EEG Topomap"
-                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/eeg/eeg-experiment.png" alt="EEG Experiment"
-                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                    </div>
-                    <button class="slider-arrow prev-arrow" aria-label="Previous slide">&#10094;</button>
-                    <button class="slider-arrow next-arrow" aria-label="Next slide">&#10095;</button>
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Project 2 -->
-        <div class="project-card reverse">
-            <div class="project-info">
-                <h3>Image Classifier &amp; Diffusion <a href="https://github.com/peytonmou/deep_learning"
-                        target="_blank"
-                        style="color: var(--primary-color); text-decoration: none; font-size: 1.1rem; font-weight: 600; margin-left: 0.5rem;">[GitHub]</a>
-                </h3>
-                <p>A PyTorch-based CNN trained on the Oxford Flower dataset. Increased accuracy from baseline 60% to
-                    <strong style="color: var(--primary-color);">85.13%</strong> on
-                    the 10-class dataset and <strong style="color: var(--primary-color);">83.63%</strong> on the
-                    102-class dataset.
-                    <br><br>A latent diffusion pipeline including a U-Net denoising model and a variational autoencoder
-                    to
-                    generate flower-like images from pure random noise over 10 iterative denoising steps.
-                </p>
-                <div class="tech-stack">
-                    <strong>Tech Stack:</strong> Python · PyTorch · CNN · VAE · UNet · Latent Diffusion
-                </div>
-            </div>
-            <div class="project-visuals">
-                <div class="project-slider" id="project2-slider">
-                    <div class="slides-track-container">
-                        <div class="slides-track">
-                            <div class="slide">
-                                <img src="assets/image/unet.png" alt="U-Net Architecture"
-                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/image/img_cnn.png" alt="CNN Classification Result"
-                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/image/img_cnn2.png" alt="CNN Training Curves"
-                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/image/vae.png" alt="VAE Latent Space Reconstruction"
-                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                    </div>
-                    <button class="slider-arrow prev-arrow" aria-label="Previous slide">&#10094;</button>
-                    <button class="slider-arrow next-arrow" aria-label="Next slide">&#10095;</button>
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Project 4 -->
-        <div id="project4" class="project-category category-ml" style="scroll-margin-top: 150px;">&#128300; Machine
-            Learning</div>
-        <div class="project-card reverse">
-            <div class="project-info">
-                <h3>Wine Traceability <a href="https://github.com/peytonmou/Wine" target="_blank"
-                        style="color: var(--primary-color); text-decoration: none; font-size: 1.1rem; font-weight: 600; margin-left: 0.5rem;">[GitHub]</a>
-                </h3>
-                <p>Predict wine location based on NIR (near-infrared) and hyperspectral data through the bottle. Machine
-                    learning models
-                    (Logistic Regression, KNN,SVM, Random Forest, XGBOOST)
-                    and CNNs to classify wine
-                    types/regions/producers,
-                    achieving f1-scores <strong style="color: var(--primary-color);">89.33%</strong> on 5-class region
-                    and <strong style="color: var(--primary-color);">100%</strong> on 3-class liquid type
-                    classification.</p>
-                <div class="tech-stack">
-                    <strong>Tech Stack:</strong> PCA · Scikit-learn · SVM · Random Forest · XGBOOST · CNN
-                </div>
-            </div>
-            <div class="project-visuals">
-                <div class="project-slider" id="project4-slider">
-                    <div class="slides-track-container">
-                        <div class="slides-track">
-                            <div class="slide">
-                                <img src="assets/wine/wine-region-pca.png" alt="Wine Region PCA"
-                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/wine/wine-liquidtype-pca.png" alt="Wine Liquid Type PCA"
-                                    class="visual-img lightbox-trigger" onclick="openLightbox(this)">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/wine/sensor5-cls-results.png"
-                                    alt="Wine Sensor 5 Classification Results" class="visual-img lightbox-trigger"
-                                    onclick="openLightbox(this)">
-                            </div>
-                        </div>
-                    </div>
-                    <button class="slider-arrow prev-arrow" aria-label="Previous slide">&#10094;</button>
-                    <button class="slider-arrow next-arrow" aria-label="Next slide">&#10095;</button>
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Projects 5 & 6 — two-column text-only row with individual subtitles -->
         <div class="projects-dual-row">
             <!-- Project 5 -->
             <div class="project-dual-col">
-                <div id="project5" class="project-category category-genai" style="margin:0 0 0 0;">&#10024; Generative
-                    AI</div>
+
                 <div id="project5-card" class="project-card-text">
+                    <div class="project-card-top">
+                        <span class="agent-badge type-badge">
+                            Generative AI • Gemini 2.0 Flash
+                        </span>
+                    </div>
                     <h3>Gemini AI PDF Reader <a href="https://github.com/peytonmou/GenAI" target="_blank"
                             style="color: var(--primary-color); text-decoration: none; font-size: 1rem; font-weight: 600; margin-left: 0.4rem;">[GitHub]</a>
                     </h3>
@@ -340,27 +378,26 @@
                         and
                         query PDF files. Built a responsive front-end interface using Gradio to deliver seamless user
                         interactions.</p>
-                    <div class="tech-stack">
-                        <strong>Tech Stack:</strong> API Integration · Gemini 2.0 Flash · Gradio
-                    </div>
+
                 </div>
             </div><!-- end project-dual-col -->
 
             <!-- Project 6 -->
             <div class="project-dual-col">
-                <div id="project6" class="project-category category-genai" style="margin:0 0 0 0;">&#128269;
-                    Information Retrieval
-                </div>
+
                 <div id="project6-card" class="project-card-text">
+                    <div class="project-card-top">
+                        <span class="agent-badge type-badge">
+                            Information Retrieval
+                        </span>
+                    </div>
                     <h3>Web Search Engine <a href="https://github.com/peytonmou/search_engine" target="_blank"
                             style="color: var(--primary-color); text-decoration: none; font-size: 1rem; font-weight: 600; margin-left: 0.4rem;">[GitHub]</a>
                     </h3>
                     <p>A keyword search engine featuring an inverted index mapped over a corpus of 173,000
                         documents. Integrated RocksDB storage utilizing Log-Structured Merge (LSM) trees for optimized
                         write performance and key-value lookups.</p>
-                    <div class="tech-stack">
-                        <strong>Tech Stack:</strong> Parsing· Inverted Index · RocksDB
-                    </div>
+
                 </div>
             </div><!-- end project-dual-col -->
         </div><!-- end projects-dual-row -->
@@ -378,7 +415,8 @@
                     <li><strong>Deep Learning &amp; GenAI:</strong> PyTorch, TensorFlow, Transformers, CNNs, Latent
                         Diffusion, CVAE</li>
                     <li><strong>Computer Vision &amp; Graphics:</strong> OpenCV, OpenGL</li>
-                    <li><strong>Cloud &amp; Development tools:</strong> Microsoft Azure, Fabric, Foundry, Git/GitHub
+                    <li><strong>Cloud &amp; Development tools:</strong> Azure, Fabric, Azure AI Foundry, Hugging Face,
+                        Git/GitHub
                     </li>
                     <li class="cert-item-compact">
                         <ul>
